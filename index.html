@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      canvas {
+        position: relative;
+        background-image: url(img/back.png);
+        border: 5px solid rgb(117, 155, 170);
+        border-style: groove;
+        display: block;
+        margin: 0 auto;
+        border-bottom: hidden;
+      }
+      .status {
+        position: relative;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 944px;
+        height: fit-content;
+        top: 85%;
+        border-color: rgb(117, 155, 170);
+        border-style: solid;
+        border-top: hidden;
+      }
+      .status p {
+        display: inline-flex;
+        font-size: large;
+        color: rgb(187, 216, 228);
+        margin: 5px;
+      }
+      html {
+        background-color: rgb(9, 83, 112);
+      }
+      form {
+        position: absolute;
+        background-color: rgb(117, 155, 170);
+        border: 3px solid rgb(9, 83, 112);
+        padding: 10px;
+      }
+      button {
+        font-size: large;
+        color: rgb(187, 216, 228);
+        height: 48px;
+        margin: 0px 15px 0px 30px;
+        position: relative;
+        width: 66px;
+        box-shadow: none;
+        border-width: 2px;
+        border-color: rgb(9, 83, 112);
+        background-color: rgb(50, 115, 116);
+        padding: 2px;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Harrington, fantasy;
+      }
+
+      img {
+        height: 66px;
+        width: 58px;
+        margin: 0px 17px 0px 32px;
+        border-radius: 3px;
+        border: 2px solid rgb(9, 83, 112);
+      }
+      .pause {
+        width: 100px;
+      }
+      #gameOver {
+        display: none;
+      }
+    </style>
+    <script defer src="funcs.js"></script>
+    <script defer src="const&variables.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <span
+      ><canvas width="960" height="480" id="cnv"> </canvas>
+
+      <form id="charForm">
+        <p>
+          <img src="img/fighterico.png" />
+          <img src="img/rangerico.png" />
+          <img src="img/mageico.png" />
+        </p>
+        <p>
+          <button id="butChar1">Воин</button>
+          <button id="butChar2">Лучник</button>
+          <button id="butChar3">Маг</button>
+        </p>
+      </form>
+
+      <form id="gameOver">
+        <p id="results">Игра окончена</p>
+      </form></span
+    >
+    <span
+      ><form class="status">
+        <button class="pause">Пауза</button>
+        <p class="points">Очки: 0</p>
+        <p class="hp">Здоровье: 0</p>
+        <p class="lvl">Уровень: 0</p>
+        <p>Управление WASD, стрельба Z</p>
+      </form></span
+    >
+  </body>
+</html>
